@@ -1,0 +1,107 @@
+{
+    "products": [
+        {
+            "name": "",
+            "code": "A1000",
+            "description": " ",
+            "quantity": "5",
+            "imageLink": "./img/product/1.jpg",
+            "price": "$5",
+            "category": "fashion",
+            "id": 1
+        },
+        {
+            "name": "",
+            "code": "A1000",
+            "description": "",
+            "quantity": "5",
+            "imageLink": "./img/product/2.jpg" ,
+            "price": "$5",
+            "category": "fashion",
+            "id": 2
+        },
+        {
+            "name": "",
+            "code": "A1000",
+            "description": " ",
+            "quantity": "5",
+            "imageLink": "img/product/3.jpg" ,
+            "price": "$5",
+            "category": "fashion",
+            "id": 3
+        },
+        {
+            "name": " ",
+            "code": "A1000",
+            "description": " ",
+            "quantity": "5",
+            "imageLink": "img/product/1.jpg" ,
+            "price": "$5",
+            "category": "fashion",
+            "id": 4
+        },
+        {
+            "name": " ",
+            "code": "A1000",
+            "description": " ",
+            "quantity": "5",
+            "imageLink": "img/product/1.jpg" ,
+            "price": "$5",
+            "category": "fashion",
+            "id": 5
+        },
+        {
+            "name": " ",
+            "code": "A1000",
+            "description": " ",
+            "quantity": "5",
+            "imageLink": "img/product/1.jpg" ,
+            "price": "$5",
+            "category": "fashion",
+            "id": 6
+        },
+        {
+            "name": " ",
+            "code": "A1000",
+            "description": " ",
+            "quantity": "5",
+            "imageLink": "img/product/1.jpg" ,
+            "price": "$5",
+            "category": "fashion",
+            "id": 7
+        },
+        {
+            "name": " ",
+            "code": "A1000",
+            "description": " ",
+            "quantity": "5",
+            "imageLink": "img/product/1.jpg" ,
+            "price": "$5",
+            "category": "fashion",
+            "id": 8
+        }
+    ],
+    "category": [
+        {
+          "tops": "tops"
+        },
+        {
+          "shoes": "shoes"
+        },
+        {
+          "lingeries": "lingeries"
+        },
+        {
+          "beachwears": "beachwears"
+        }
+      ],
+      "admin": [
+        {
+          "username": "username"
+        },
+        {
+          "password": "password"
+        }
+      ]
+    
+}   
