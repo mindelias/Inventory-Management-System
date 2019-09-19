@@ -97,7 +97,7 @@ $(document).ready(function () {
   // add new product
 
   $("#addproduct").on("click", function () {
-    // e.preventDefault();
+     e.preventDefault();
   
   
   // formName.val(`${product.name}`)
@@ -119,7 +119,7 @@ $(document).ready(function () {
       category: formCategory.val(),
        Code: prodCode.val()
     };
-     $("#addproduct").trigger("reset");
+     //$("#addproduct").trigger("reset");
     $.ajax({
       type: "POST",
       url: "http://localhost:3000/products/",
