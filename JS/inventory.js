@@ -4,7 +4,7 @@ $(document).ready(function () {
   function populate(product) {
     $tr.append(`
       <tr id="${product.id}">
-          <td class="column1">${product.code}</td>
+          <td class="column1">${product.id}</td>
           <td class="column2">${product.category}</td>
           <td class="column3">${product.name}</td>
           <td class="column4">${product.price}</td>
@@ -17,9 +17,7 @@ $(document).ready(function () {
               <button id="deleteButton" onclick="deleteProduct(${product.id})">
                   <i class="fas fa-trash"></i>
               </button>
-              <button id="addButton" onclick="deleteProduct(${product.id})">
-                  <i class="fas fa-trash"></i>
-              </button>
+               
           </div>
       </td>
   </tr>`);
@@ -154,22 +152,55 @@ $(document).ready(function () {
 
 
   // delete press delete a product
-
+  
   deleteProduct = (id) => {
     const product = products.find(e => e.id === id)
-     .then((result) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      type: 'warning',
+      // showCancelButton: true,
+      // confirmButtonColor: '#3085d6',
+      // cancelButtonColor: '#d33',
+      // confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
       if (result.value) {
         $.ajax({
           type: "DELETE",
           url: `http://localhost:3000/products/${id}`,
           success: () => {
             $(`#${product.id}`).remove();
-            
+            const Toast = Swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000
+            });
+            Toast.fire({
+              type: "success",
+              title: "Deleted successfully"
+            });
           }
         });
       }
     })
   }
+
+  // deleteProduct = (id) => {
+  //   const product = products.find(e => e.id === id)
+  //    .then((result) => {
+  //     if (result.value) {
+  //       $.ajax({
+  //         type: "DELETE",
+  //         url: `http://localhost:3000/products/${id}`,
+  //         success: () => {
+  //           $(`#${product.id}`).remove();
+            
+  //         }
+  //       });
+  //     }
+  //   })
+  // }
 })
 
 
