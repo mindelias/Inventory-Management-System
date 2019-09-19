@@ -1,31 +1,28 @@
 {
   "products": [
     {
-      "name": "pink",
-      "code": "A1000",
+      "name": "plet",
       "description": "we,hfjkwehkfwekulfwek",
-      "quantity": "5",
+      "quantity": "50",
       "imageLink": "./img/product/2.jpg",
       "price": "$5",
-      "category": "",
-      "id": 2,
-      "qauntity": "undefined"
+      "category": "tops",
+      "code": "undefined",
+      "id": 2
     },
     {
-      "name": "black",
-      "code": "A1000",
+      "name": "black net",
       "description": "ewbfjkwejklurfyweu ",
-      "quantity": "5",
+      "quantity": "undefined",
       "imageLink": "img/product/3.jpg",
       "price": "$5",
-      "category": "",
-      "id": 3,
-      "qauntity": "undefined"
+      "category": "bags",
+      "id": 3
     },
     {
-      "name": " yellow",
+      "name": " yellow top",
       "description": "wdhfweukgukfweuk ",
-      "qauntity": "undefined",
+      "quantity": " ",
       "imageLink": "img/product/1.jpg",
       "price": "$5",
       "category": "",
@@ -34,7 +31,7 @@
     {
       "name": "redish ",
       "description": "qwefjeqwhildfhweil ",
-      "qauntity": "undefined",
+      "quantity": "undefined",
       "imageLink": "img/product/1.jpg",
       "price": "$10",
       "category": "",
@@ -49,6 +46,36 @@
       "price": "$5",
       "category": "fashion",
       "id": 6
+    },
+    {
+      "name": "pinkhat",
+      "description": "we,hfjkwehkfwekulfwek",
+      "quantity": "50",
+      "imageLink": "./img/product/2.jpg",
+      "price": "$5",
+      "category": "tops",
+      "Code": "undefined",
+      "id": 7
+    },
+    {
+      "name": "pinkhat",
+      "description": "we,hfjkwehkfwekulfwek",
+      "quantity": "50",
+      "imageLink": "./img/product/2.jpg",
+      "price": "$5",
+      "category": "tops",
+      "Code": "undefined",
+      "id": 8
+    },
+    {
+      "name": "pinkhat",
+      "description": "we,hfjkwehkfwekulfwek",
+      "quantity": "50",
+      "imageLink": "./img/product/2.jpg",
+      "price": "$5",
+      "category": "tops",
+      "Code": "undefined",
+      "id": 9
     }
   ],
   "category": [

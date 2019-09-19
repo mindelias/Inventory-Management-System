@@ -4,11 +4,11 @@ $(document).ready(function () {
   function populate(product) {
     $tr.append(`
       <tr id="${product.id}">
-          <td class="column1">${product.expireDate}</td>
+          <td class="column1">${product.code}</td>
           <td class="column2">${product.category}</td>
           <td class="column3">${product.name}</td>
           <td class="column4">${product.price}</td>
-          <td class="column5">${product.qauntity}</td>
+          <td class="column5">${product.quantity}</td>
           <td class="column6">
           <div>
               <button class="editButtons" onclick="editProduct(${product.id})" data-toggle="modal" data-target="#exampleModal">
@@ -35,16 +35,10 @@ $(document).ready(function () {
       url: "http://localhost:3000/products",
       success: function (response) {
         products = response;
-        $.each(response, (i, product) => {
+        response.forEach( product => {
           populate(product);
         });
-        //form table padginatio action call
-        $('#example').DataTable({
-          language: {
-            search: '<button id="searchBtn" type="submit" class="btn btn-search fa fa-search"></button>',
-            searchPlaceholder: "Search via product name, quantity or expiring date"
-          },
-        });
+         
       }
     })
   };
@@ -57,11 +51,11 @@ $(document).ready(function () {
     const FormData = {
       name: formName.val(),
       description: formDescription.val(),
-      qauntity: formQuantity.val(),
+      quantity: formQuantity.val(),
       imageLink: formImageLink.val(),
       price: formPrice.val(),
       category: formCategory.val(),
-      expireDate: formDate.val()
+      code: prodCode.val()
     };
 
     $.ajax({
@@ -72,11 +66,11 @@ $(document).ready(function () {
           const product = res;
           $(`#${id}`).empty()
           $(`#${id}`).html(`
-          <td class="column1">${product.expireDate}</td>
+          <td class="column1">${product.code}</td>
           <td class="column2">${product.category}</td>
           <td class="column3">${product.name}</td>
           <td class="column4">${product.price}</td>
-          <td class="column5">${product.qauntity}</td>
+          <td class="column5">${product.quantity}</td>
           <td class="column6">
           <div>
               <button id="editButton${product.id}" onclick="editProduct(${product.id})" data-toggle="modal" data-target="#exampleModal">
@@ -85,6 +79,7 @@ $(document).ready(function () {
               <button id="deleteButton" onclick="deleteProduct(${product.id})">
                   <i class="fas fa-trash"></i>
               </button>
+              
           </div>
       </td>`);
         products = products.filter(prod => {
@@ -101,36 +96,58 @@ $(document).ready(function () {
 
   // add new product
 
-  $("#addProduct").on("click", function (e) {
-    e.preventDefault();
+  $("#addproduct").on("click", function () {
+    // e.preventDefault();
   
   
-  formName.val(`${product.name}`)
-  formPrice.val(`${product.price}`)
-  formQuantity.val(`${product.qauntity}`)
-  formDescription.val(`${product.description}`)
-  formImageLink.val(`${product.imageLink}`)
-  formCategory.val(`${product.category}`)
-  formDate.val(`${product.expireDate}`)
-    if (condition) {
+  // formName.val(`${product.name}`)
+  // formPrice.val(`${product.price}`)
+  // formQuantity.val(`${product.qauntity}`)
+  // formDescription.val(`${product.description}`)
+  // formImageLink.val(`${product.imageLink}`)
+  // formCategory.val(`${product.category}`)
+  // prodCode.val(`${product.code}`)
+  //   if (condition) {
       
-    }
+  //   }
     const FormData = {
       name: formName.val(),
       description: formDescription.val(),
-      qauntity: formQuantity.val(),
+      quantity: formQuantity.val(),
       imageLink: formImageLink.val(),
       price: formPrice.val(),
       category: formCategory.val(),
-      expireDate: formDate.val()
+       Code: prodCode.val()
     };
-    $("#addProduct").trigger("reset");
+     $("#addproduct").trigger("reset");
     $.ajax({
       type: "POST",
       url: "http://localhost:3000/products/",
       data: FormData,
-      success: () => {
+      success: (newproduct) => {
+        $tr.append(`
+      <tr id="${newproduct.id}">
+          <td class="column1">${newproduct.code}</td>
+          <td class="column2">${newproduct.category}</td>
+          <td class="column3">${newproduct.name}</td>
+          <td class="column4">${newproduct.price}</td>
+          <td class="column5">${newproduct.quantity}</td>
+          <td class="column6">
+          <div>
+              <button class="editButtons" onclick="editProduct(${newproduct.id})" data-toggle="modal" data-target="#exampleModal">
+                  <i class="fas fa-marker"></i>
+              </button>
+              <button id="deleteButton" onclick="deleteProduct(${newproduct.id})">
+                  <i class="fas fa-trash"></i>
+              </button>
+               
+          </div>
+      </td>
+  </tr>`);
          
+      },
+      error: function(){
+           alert('not added succesfully')   
       }
     });
   });
@@ -160,11 +177,11 @@ const $tr = $("#tablepopulate");
 const rowid = $("#id")
 const formName = $("#name");
 const formDescription = $("#describe");
-const formQuantity = $("#prodQaun");
+const formQuantity = $("#prodQuan");
 const formImageLink = $("#imgLnk");
 const formPrice = $("#price");
 const formCategory = $("#catId");
-const formDate = $("#expireDate")
+const prodCode = $("#prodcode")
 let products = [];
 
 //editfunction
@@ -172,10 +189,10 @@ editProduct = (id) => {
   const product = products.find(e => e.id === id)
   formName.val(`${product.name}`)
   formPrice.val(`${product.price}`)
-  formQuantity.val(`${product.qauntity}`)
+  formQuantity.val(`${product.quantity}`)
   formDescription.val(`${product.description}`)
   formImageLink.val(`${product.imageLink}`)
   formCategory.val(`${product.category}`)
-  formDate.val(`${product.expireDate}`)
+  prodCode.val(`${product.code}`)
   rowid.val(id)
 }
