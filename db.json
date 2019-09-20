@@ -1,32 +1,12 @@
 {
   "products": [
     {
-      "name": "redish ",
-      "description": "qwefjeqwhildfhweil ",
-      "quantity": "undefined",
-      "imageLink": "img/product/1.jpg",
-      "price": "$10",
-      "category": "",
-      "code": "004",
-      "id": 5
-    },
-    {
-      "name": " goldish",
-      "description": "egwhkgfukewg ",
-      "quantity": "5",
-      "imageLink": "img/product/1.jpg",
+      "name": "pinkset",
       "price": "$5",
-      "category": "fashion",
-      "code": "004",
-      "id": 6
-    },
-    {
-      "name": "pinkhat",
-      "description": "we,hfjkwehkfwekulfwek",
       "quantity": "50",
-      "imageLink": "./img/product/2.jpg",
-      "price": "$5",
+      "description": "straight and bold",
       "category": "tops",
+      "imageLink": "./img/product/2.jpg",
       "Code": "undefined",
       "id": 8
     },
@@ -41,26 +21,6 @@
       "id": 9
     },
     {
-      "name": "pley",
-      "description": "we,hfjkwehkfwekulfwek",
-      "quantity": "50",
-      "imageLink": "./img/product/2.jpg",
-      "price": "$5",
-      "category": "tops",
-      "Code": "undefined",
-      "id": 10
-    },
-    {
-      "name": "pley",
-      "description": "we,hfjkwehkfwekulfwek",
-      "quantity": "50",
-      "imageLink": "./img/product/2.jpg",
-      "price": "$5",
-      "category": "tops",
-      "Code": "undefined",
-      "id": 11
-    },
-    {
       "name": "black top",
       "description": "",
       "quantity": "100",
@@ -71,24 +31,64 @@
       "id": 12
     },
     {
-      "name": "black top",
-      "description": "",
-      "quantity": "100",
-      "imageLink": "./img/product/2.jpg",
-      "price": "$50",
+      "name": "pencil gown",
+      "price": "$100",
+      "quantity": "90",
+      "description": "a blue pencil skirt",
       "category": "tops",
-      "Code": "ggshjh001",
+      "imageLink": "https://cdn-2.jjshouse.com/upimg/jjshouse/s1140/89/0f/d495fa8fbd176239005309e914c2890f.jpg",
+      "Code": "undefined",
       "id": 13
     },
     {
-      "name": "plet",
-      "description": "we,hfjkwehkfwekulfwek",
-      "quantity": "50",
-      "imageLink": "./img/product/2.jpg",
-      "price": "$5",
+      "name": "aminat",
+      "description": "very big",
+      "quantity": "100",
+      "imageLink": "",
+      "price": "200",
       "category": "tops",
-      "Code": "undefined",
+      "Code": "450#",
       "id": 14
+    },
+    {
+      "name": "shaw",
+      "description": "very big",
+      "quantity": "100",
+      "imageLink": "",
+      "price": "200",
+      "category": "shoes",
+      "Code": "450#",
+      "id": 16
+    },
+    {
+      "name": "sexy pink top",
+      "price": "$1000",
+      "quantity": "12",
+      "description": "luxury top",
+      "category": "tops",
+      "imageLink": "",
+      "Code": "#001",
+      "id": 17
+    },
+    {
+      "name": "down",
+      "description": ";ovely",
+      "quantity": "100",
+      "imageLink": "https://cdn-2.jjshouse.com/upimg/jjshouse/s1140/89/0f/d495fa8fbd176239005309e914c2890f.jpg",
+      "price": "100",
+      "category": "shoes",
+      "Code": "f001",
+      "id": 18
+    },
+    {
+      "name": "sexy yellow top",
+      "price": "$1000",
+      "quantity": "12",
+      "description": "luxury top",
+      "imageLink": "",
+      "category": "tops",
+      "Code": "#001",
+      "id": 19
     }
   ],
   "category": [
